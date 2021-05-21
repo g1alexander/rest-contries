@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <h1 class="bg-green-500 font-bold text-center">Hola mundo</h1>
+  <svg>
+    <path fill="green" :d="iAccount" />
+  </svg>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { mdiAccount } from "@mdi/js";
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  setup() {
+    const iAccount = mdiAccount;
+
+    return { iAccount };
+  },
+};
 </script>

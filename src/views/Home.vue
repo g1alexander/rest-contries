@@ -1,18 +1,38 @@
 <template>
-  <h1 class="bg-green-500 font-bold text-center">Hola mundo</h1>
-  <svg>
-    <path fill="green" :d="iAccount" />
-  </svg>
+  <div class="xs:container-fluid md:container mx-auto">
+    <Navbar />
+
+    <div class="flex justify-between p-5">
+      <Search />
+      <Filter />
+    </div>
+
+    <Contries />
+  </div>
 </template>
 
 <script>
-import { mdiAccount } from "@mdi/js";
+import Navbar from "@/components/Navbar";
+import Search from "@/components/Home/Search";
+import Filter from "@/components/Home/Filter";
+import Contries from "../components/Home/Contries.vue";
+import { provide, ref } from "vue";
 export default {
   name: "Home",
+  components: {
+    Navbar,
+    Search,
+    Filter,
+    Contries,
+  },
   setup() {
-    const iAccount = mdiAccount;
+    const contries = ref([]);
+    provide("contries", contries);
 
-    return { iAccount };
+    const contriesFilter = ref([]);
+    provide("contriesFilter", contriesFilter);
+
+    console.log(contries.value);
   },
 };
 </script>

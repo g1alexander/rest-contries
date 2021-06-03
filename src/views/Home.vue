@@ -7,7 +7,7 @@
       <Filter />
     </div>
 
-    <Contries />
+    <Countries />
   </div>
 </template>
 
@@ -15,7 +15,7 @@
 import Navbar from "@/components/Navbar";
 import Search from "@/components/Home/Search";
 import Filter from "@/components/Home/Filter";
-import Contries from "../components/Home/Contries.vue";
+import Countries from "../components/Home/Countries.vue";
 import { provide, ref } from "vue";
 export default {
   name: "Home",
@@ -23,16 +23,16 @@ export default {
     Navbar,
     Search,
     Filter,
-    Contries,
+    Countries,
   },
   setup() {
-    const contries = ref([]);
-    provide("contries", contries);
+    const countries = ref([]);
+    provide("countries", countries);
 
-    const contriesFilter = ref([]);
-    provide("contriesFilter", contriesFilter);
+    const countriesFilter = ref([]);
+    provide("countriesFilter", countriesFilter);
 
-    console.log(contries.value);
+    console.log(countries.value);
   },
 };
 </script>

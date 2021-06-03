@@ -3,7 +3,7 @@
     class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5"
   >
     <article
-      v-for="(country, index) in contries"
+      v-for="(country, index) in countries"
       :key="index"
       class="bg-green-400 rounded-t-md rounded-b-md"
     >
@@ -28,13 +28,13 @@ import { inject, onMounted } from "vue";
 import { useApi } from "@/hooks/useApi.js";
 export default {
   setup() {
-    const contries = inject("contries");
+    const countries = inject("countries");
 
     onMounted(() => {
-      useApi().then((res) => (contries.value = res));
+      useApi().then((res) => (countries.value = res));
     });
 
-    return { contries };
+    return { countries };
   },
 };
 </script>

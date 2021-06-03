@@ -1,10 +1,10 @@
 export async function useApi() {
   try {
     const res = await fetch("api.json"),
-      contries = await res.json();
+      countries = await res.json();
 
     if (!res.ok) throw { status: res.status, statusText: res.statusText };
-    return contries;
+    return countries;
   } catch (err) {
     console.error(err);
   }

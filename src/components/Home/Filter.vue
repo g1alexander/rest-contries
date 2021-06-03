@@ -1,6 +1,5 @@
 <template>
-  <select name="region" v-model="region">
-    <option hidden value="Filter by Region">Filter by Region</option>
+  <select @click="filterRegion" name="region" v-model="region">
     <option value="">All</option>
     <option value="Africa">Africa</option>
     <option value="Americas">America</option>
@@ -11,15 +10,18 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { inject } from "vue";
+import { useActions } from "@/hooks/useActions";
 
 export default {
   setup() {
-    const region = ref("Filter by Region");
+    const region = inject("region");
 
-    return { region };
+    const { filterRegion } = useActions();
+
+    filterRegion();
+
+    return { region, filterRegion };
   },
 };
 </script>
-
-<style></style>

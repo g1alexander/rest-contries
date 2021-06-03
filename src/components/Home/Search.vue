@@ -1,15 +1,21 @@
 <template>
   <span class="flex">
     <Icon :icon="iMagnify" :color="'black'" />
-    <input type="text" v-model="search" placeholder="Search for a country" />
-    <!-- {{ search }} -->
+    <form @keyup="searchForm">
+      <input
+        type="text"
+        v-model.trim="search"
+        placeholder="Search for a country"
+      />
+    </form>
   </span>
 </template>
 
 <script>
 import Icon from "@/components/Icon";
 import { mdiMagnify } from "@mdi/js";
-import { ref } from "vue";
+import { inject } from "vue";
+import { useActions } from "@/hooks/useActions";
 export default {
   components: {
     Icon,
@@ -17,10 +23,13 @@ export default {
 
   setup() {
     const iMagnify = mdiMagnify;
+    const search = inject("search");
 
-    const search = ref("");
+    const { searchForm } = useActions();
 
-    return { search, iMagnify };
+    searchForm();
+
+    return { search, iMagnify, searchForm };
   },
 };
 </script>

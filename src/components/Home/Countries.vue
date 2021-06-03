@@ -3,38 +3,35 @@
     class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5"
   >
     <article
-      v-for="(country, index) in countries"
+      v-for="(country, index) in countriesFilter"
       :key="index"
       class="bg-green-400 rounded-t-md rounded-b-md"
     >
-      <img class="w-full rounded-t-md" :src="country.flag" />
-
-      <div class="px-5 pt-5 pb-12">
-        <router-link :to="`/${country.name}`">
-          <h2 class="pb-2 font-bold text-lg">{{ country.name }}</h2>
-        </router-link>
-        <p>
-          <span class="font-bold">Population:</span> {{ country.population }}
-        </p>
-        <p><span class="font-bold">Region:</span> {{ country.region }}</p>
-        <p><span class="font-bold">Capital:</span> {{ country.capital }}</p>
-      </div>
+      <Country :country="country" />
     </article>
   </div>
 </template>
 
 <script>
 import { inject, onMounted } from "vue";
-import { useApi } from "@/hooks/useApi.js";
+import { useApi } from "@/hooks/useApi";
+import Country from "./Country";
+
 export default {
+  components: { Country },
   setup() {
     const countries = inject("countries");
+    const countriesFilter = inject("countriesFilter");
 
     onMounted(() => {
-      useApi().then((res) => (countries.value = res));
+      useApi().then((res) => {
+        res = res.sort((a, b) => (a.population < b.population ? 1 : -1));
+        countries.value = res;
+        countriesFilter.value = res;
+      });
     });
 
-    return { countries };
+    return { countriesFilter };
   },
 };
 </script>

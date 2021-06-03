@@ -32,7 +32,11 @@ export default {
     const countriesFilter = ref([]);
     provide("countriesFilter", countriesFilter);
 
-    console.log(countries.value);
+    const search = ref("");
+    provide("search", search);
+
+    const region = ref("");
+    provide("region", region);
   },
 };
 </script>

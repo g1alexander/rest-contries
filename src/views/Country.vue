@@ -72,9 +72,10 @@ export default {
   setup(props) {
     const iArrowLeft = mdiArrowLeft;
     const country = ref({});
+    const name = props.country.split("-").join(" ");
 
     onMounted(() => {
-      useApiOne(props.country).then((res) => (country.value = res[0]));
+      useApiOne(name).then((res) => (country.value = res[0]));
     });
     return { iArrowLeft, country };
   },

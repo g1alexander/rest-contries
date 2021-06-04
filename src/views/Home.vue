@@ -1,5 +1,7 @@
 <template>
-  <div class="xs:container-fluid md:container mx-auto">
+  <div
+    class="xs:container-fluid md:container mx-auto bg-gray-400 dark:bg-gray-800"
+  >
     <Navbar />
 
     <div class="flex justify-between p-5">

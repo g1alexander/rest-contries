@@ -2,7 +2,7 @@
   <img class="w-full rounded-t-md" :src="country.flag" />
 
   <div class="px-5 pt-5 pb-12">
-    <router-link :to="`/${country.name}`">
+    <router-link :to="`/${url(country.name)}`">
       <h2 class="pb-2 font-bold text-lg">{{ country.name }}</h2>
     </router-link>
     <p>
@@ -24,7 +24,12 @@ export default {
       return new Intl.NumberFormat("de-DE").format(num);
     };
 
-    return { formatPopulation };
+    const url = (name)=>{
+      name = name.split(" ").join("-")
+      return name
+    }
+
+    return { formatPopulation, url };
   },
 };
 </script>

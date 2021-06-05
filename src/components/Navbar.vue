@@ -1,9 +1,13 @@
 <template>
-  <nav class="bg-green-400 flex justify-between items-center h-14 px-2">
-    <h1 class="font-bold text-xl">Where in the world?</h1>
+  <div>
+    <nav
+      class="xs:container-fluid md:container mx-auto flex justify-between items-center h-14 px-2"
+    >
+      <h1 class="font-bold text-xl">Where in the world?</h1>
 
-    <DarkMode />
-  </nav>
+      <DarkMode />
+    </nav>
+  </div>
 </template>
 
 <script>

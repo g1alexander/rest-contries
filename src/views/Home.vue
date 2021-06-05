@@ -1,15 +1,15 @@
 <template>
-  <div
-    class="xs:container-fluid md:container mx-auto bg-gray-400 dark:bg-gray-800"
-  >
-    <Navbar />
+  <div>
+    <Navbar class="bg-gray-50 dark:bg-gray-700 shadow" />
 
-    <div class="flex justify-between p-5">
-      <Search />
-      <Filter />
+    <div
+      class="smSearch:block  md:flex md:justify-between p-5 xs:container-fluid md:container mx-auto"
+    >
+      <Search class="xs:mb-2 md:mb-0 shadow" />
+      <Filter class="shadow" />
     </div>
 
-    <Countries />
+    <Countries class="xs:container-fluid md:container mx-auto" />
   </div>
 </template>
 

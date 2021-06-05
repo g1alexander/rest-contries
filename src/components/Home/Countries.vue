@@ -5,7 +5,7 @@
     <article
       v-for="(country, index) in countriesFilter"
       :key="index"
-      class="bg-green-400 rounded-t-md rounded-b-md"
+      class="bg-gray-50 dark:bg-gray-700 rounded-t-md rounded-b-md"
     >
       <Country :country="country" />
     </article>

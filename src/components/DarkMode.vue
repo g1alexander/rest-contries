@@ -1,6 +1,6 @@
 <template>
   <div @click="darkMode" class="flex items-center cursor-pointer">
-    <Icon :icon="icon" :color="'green'" :text="text" />
+    <Icon :icon="icon" :color="color" :text="text" />
   </div>
 </template>
 
@@ -13,15 +13,18 @@ export default {
   components: { Icon },
   setup() {
     const icon = ref(null),
-      text = ref("");
+      text = ref(""),
+      color = ref(null);
 
     onMounted(() => {
       if (JSON.parse(localStorage.getItem("darkmode"))) {
         text.value = "Light Mode";
         icon.value = mdiWhiteBalanceSunny;
+        color.value = "hsl(0, 0%, 98%)";
       } else {
         text.value = "Dark Mode";
         icon.value = mdiMoonWaxingCrescent;
+        color.value = "hsl(200, 15%, 8%)";
       }
     });
 
@@ -34,14 +37,16 @@ export default {
         document.documentElement.classList.add("dark");
         icon.value = mdiWhiteBalanceSunny;
         text.value = "Light Mode";
+        color.value = "hsl(0, 0%, 98%)";
       } else {
         document.documentElement.classList.remove("dark");
         icon.value = mdiMoonWaxingCrescent;
         text.value = "Dark Mode";
+        color.value = "hsl(200, 15%, 8%)";
       }
     };
 
-    return { icon, text, darkMode };
+    return { icon, text, darkMode, color };
   },
 };
 </script>

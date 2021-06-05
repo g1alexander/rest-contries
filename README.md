@@ -1,23 +1,27 @@
-# rest-countries
+# Rest Countries
 
-## Project setup
+Solucion del reto de [Frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
 
-```
-npm install
-```
+## Autor
 
-### Compiles and hot-reloads for development
+- [@g1alexander](https://github.com/g1alexander/)
 
-```
-npm run serve
-```
+## Tecnologias
 
-### Compiles and minifies for production
+**Client:** Vue, TailwindCSS
 
-```
-npm run build
-```
+## Funciones
 
-### Customize configuration
+- Consumo de Api
+- Busqueda de país
+- Filtrar países por región
+- Información de un país más detallada
+- Light/dark mode toggle
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Captura de pantalla
+
+![App Screenshot](https://res.cloudinary.com/dlgvxohur/image/upload/v1622934378/proyectos/rest-countries/portada.jpg)
+
+## Lecciones Aprendidas
+
+Aprendí como manejar el **composition api** de **Vue 3**, adiccional a esto pude integrar **Tailwind CSS** al framework mencionado anteriormente, y por ultimo en el manejo de los datos lo hice a traves de **provide()** y **inject()** que funciona como alternativa a **Vuex**.

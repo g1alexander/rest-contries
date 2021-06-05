@@ -1,6 +1,6 @@
 export async function useApi() {
   try {
-    const res = await fetch("api.json"),
+    const res = await fetch("https://restcountries.eu/rest/v2/"),
       countries = await res.json();
 
     if (!res.ok) throw { status: res.status, statusText: res.statusText };

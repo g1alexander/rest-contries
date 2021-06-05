@@ -5,7 +5,7 @@
     <div
       class="smSearch:block  md:flex md:justify-between p-5 xs:container-fluid md:container mx-auto"
     >
-      <Search class="xs:mb-2 md:mb-0 shadow" />
+      <Search class="xss:mb-2 md:mb-0 shadow" />
       <Filter class="shadow" />
     </div>
 

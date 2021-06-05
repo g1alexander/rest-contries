@@ -15,19 +15,18 @@
 </template>
 
 <script>
+import { useActions } from "@/hooks/useActions";
 export default {
   props: {
     country: Object,
   },
   setup() {
-    const formatPopulation = (num) => {
-      return new Intl.NumberFormat("de-DE").format(num);
-    };
+    const { formatPopulation } = useActions();
 
-    const url = (name)=>{
-      name = name.split(" ").join("-")
-      return name
-    }
+    const url = (name) => {
+      name = name.split(" ").join("-");
+      return name;
+    };
 
     return { formatPopulation, url };
   },

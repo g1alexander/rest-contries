@@ -26,5 +26,9 @@ export function useActions() {
     countriesFilter.value = filtro;
   };
 
-  return { searchForm, filterRegion };
+  const formatPopulation = (num) => {
+    return new Intl.NumberFormat("de-DE").format(num);
+  };
+
+  return { searchForm, filterRegion, formatPopulation };
 }

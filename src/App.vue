@@ -1,11 +1,8 @@
 <template>
-  <router-view
-    class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-  />
+  <router-view />
 </template>
 
 <script>
-//TODO: bug en el manejo del fondo (no se muestra en el 100% de la pantalla cuando filtra)
 import { onMounted } from "@vue/runtime-core";
 export default {
   setup() {

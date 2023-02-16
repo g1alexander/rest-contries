@@ -1,7 +1,13 @@
 <template>
   <div class="xss:pt-5 md:px-5 md:pt-20 md:flex h-80 items-center">
     <template v-if="country.flags">
-      <img :src="country.flags.png" class="md:w-5/12 h-80" alt="" srcset="" />
+      <img
+        :src="country.flags.png"
+        :alt="country.flags.png"
+        class="md:w-5/12 h-80"
+        alt=""
+        srcset=""
+      />
       <div class="md:ml-10 md:py-5 xss:pt-5 xss:pb-10">
         <h2 class="font-bold mb-7 text-2xl">{{ country.name.common }}</h2>
         <div class="md:flex">

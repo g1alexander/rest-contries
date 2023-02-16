@@ -1,5 +1,9 @@
 <template>
-  <img class="w-full rounded-t-md" :src="country.flags.png" />
+  <img
+    class="w-full rounded-t-md"
+    :alt="country.flags.png"
+    :src="country.flags.png"
+  />
 
   <div class="px-5 pt-5 pb-12">
     <router-link :to="`/${url(country.name.common)}`">

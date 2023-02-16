@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { onMounted } from "@vue/runtime-core";
+import { provide, ref, onMounted } from "vue";
 export default {
   setup() {
     onMounted(() => {
@@ -20,6 +20,18 @@ export default {
         }
       }
     });
+
+    const countries = ref([]);
+    provide("countries", countries);
+
+    const countriesFilter = ref([]);
+    provide("countriesFilter", countriesFilter);
+
+    const search = ref("");
+    provide("search", search);
+
+    const region = ref("");
+    provide("region", region);
   },
 };
 </script>

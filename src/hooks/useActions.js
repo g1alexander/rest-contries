@@ -10,7 +10,7 @@ export function useActions() {
     const searchCliente = search.value.toLowerCase();
 
     const filtro = countries.value.filter((country) => {
-      const textApi = country.name.toLowerCase();
+      const textApi = country.name.common.toLowerCase();
 
       if (textApi.includes(searchCliente)) {
         return country;

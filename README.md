@@ -1,27 +1,42 @@
-# Rest Countries
+# Frontend Mentor - REST Countries API with color theme switcher solution
 
-Solucion del reto de [Frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Autor
+## Overview
 
-- [@g1alexander](https://github.com/g1alexander/)
+### The challenge
 
-## Tecnologias
+Users should be able to:
 
-**Client:** Vue, TailwindCSS
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode _(optional)_
 
-## Funciones
+### Screenshot
 
-- Consumo de Api
-- Busqueda de país
-- Filtrar países por región
-- Información de un país más detallada
-- Light/dark mode toggle
+![](./public/restcountries.png)
 
-## Captura de pantalla
+### Links
 
-![App Screenshot](https://res.cloudinary.com/dlgvxohur/image/upload/v1622934378/proyectos/rest-countries/portada.jpg)
+- Solution URL: [repo](https://github.com/g1alexander/rest-countries)
+- Live Site URL: [website](https://rest-countries-vue.vercel.app/)
 
-## Lecciones Aprendidas
+## My process
 
-Aprendí como manejar el **composition api** de **Vue 3**, adiccional a esto pude integrar **Tailwind CSS** al framework mencionado anteriormente, y por ultimo en el manejo de los datos lo hice a traves de **provide()** y **inject()** que funciona como alternativa a **Vuex**.
+### Built with
+
+- vue 3
+- Tailwind css
+
+### What I learned
+
+I learned how to handle the **composition api** of **Vue 3**, in addition to this I was able to integrate **Tailwind CSS** to the framework mentioned above, and finally in the data management I did it through **provide()** and **inject()** which works as an alternative to **Vuex**.
+
+## Author
+
+- Website - [g1alexander.com](https://www.g1alexander.com)
+- Frontend Mentor - [@g1alexander](https://www.frontendmentor.io/profile/g1alexander)
+- Twitter - [@g1alexander\_](https://www.twitter.com/g1alexander_)
